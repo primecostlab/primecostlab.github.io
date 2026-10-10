@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="p:domain_verify" content="8e739a3c2a529c1dfc877c7d9838a3f6">
+<title>Restaurant Employee Turnover Cost Calculator (free, sourced benchmarks) · PrimeCost Lab</title>
+<meta name="description" content="Free restaurant employee turnover cost calculator: hourly headcount × turnover rate × cost per departure, with 2025 industry defaults (Black Box Intelligence). Per year, per month, share of sales.">
+<link rel="canonical" href="https://primecostlab.github.io/turnover-cost-calculator/">
+<meta property="og:title" content="Restaurant Employee Turnover Cost Calculator (free, sourced benchmarks) · PrimeCost Lab"><meta property="og:description" content="Free restaurant employee turnover cost calculator: hourly headcount × turnover rate × cost per departure, with 2025 industry defaults (Black Box Intelligence). Per year, per month, share of sales.">
+<meta property="og:type" content="website"><meta property="og:image" content="https://primecostlab.github.io/img/cover_paid.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://primecostlab.github.io/style.css">
+</head><body>
+<header class="top"><div class="nav"><a class="brand" href="https://primecostlab.github.io/">PrimeCost <span>Lab</span></a>
+<div class="links"><a href="https://primecostlab.github.io/#tools">Calculators</a><a href="https://primecostlab.github.io/#articles">Guides</a><a href="https://primecostlab.github.io/toolkit/">Toolkit</a><a href="https://primecostlab.github.io/bar-tracker/">Bar Tracker</a><a href="https://primecostlab.github.io/free-food-cost-calculator/">Free download</a><a class="btn" href="https://finoutils.gumroad.com/l/free-food-cost-calculator">Get the free calculator</a></div></div></header>
+<section class="hero"><div><div class="kicker">Free online calculator</div>
+<h1>Restaurant employee turnover cost calculator</h1>
+<p class="lead">Headcount × annual turnover rate × cost per departure. Three numbers, one answer: what staff turnover costs you per year, per month and as a share of sales.</p>
+<div class="benef"><div><b>Sourced defaults</b>Black Box Intelligence, 2025: ~92% hourly turnover in full service, ~110% in limited service, about $2,706 per hourly replacement.</div><div><b>Runs in your browser</b>Nothing is sent anywhere. No email, no download.</div><div><b>Same formula as the Toolkit</b>The Restaurant Financial Toolkit carries this line into your P&amp;L, break-even and 3-year projection.</div></div>
+</div><div class="calc" id="calc">
+<label>Hourly staff on payroll (headcount)<input id="hc" type="number" min="0" step="1" value="20"></label>
+<label>Annual turnover rate (% of headcount) <span class="hint">full service ~92%, limited service ~110%</span><input id="tr" type="number" min="0" step="1" value="92"></label>
+<label>Cost per departure ($) <span class="hint">separation, replacement, training — hard costs</span><input id="cd" type="number" min="0" step="1" value="2706"></label>
+<label>Monthly sales ($, optional)<input id="ms" type="number" min="0" step="1000" value="200000"></label>
+<div class="out"><div><span>Departures per year</span><b id="o-dep">—</b></div><div><span>Turnover cost per year</span><b id="o-year">—</b></div><div><span>Per month</span><b id="o-month">—</b></div><div><span>Share of sales</span><b id="o-pct">—</b></div></div>
+<p class="note" id="o-note"></p>
+</div></section>
+<article>
+<h2>How to read the result</h2>
+<p>Turnover cost sits in operating expenses, below prime cost. It does not show up as a line in most restaurant P&amp;Ls, which is why it is invisible until you calculate it. A 20-person hourly team at the full-service benchmark loses about 18 people a year; at $2,706 per replacement that is close to $50,000, or about 2% of a $200,000 sales month.</p>
+<h2>Where the defaults come from</h2>
+<ul><li>Hourly turnover: ~92% in full service and ~110% in limited service, rolling 12 months to 2025 Q3 (<a href="https://blackboxintelligence.com/blog/state-of-the-restaurant-workforce-employee-turnover/" rel="nofollow">Black Box Intelligence, State of the Restaurant Workforce, 2025</a>).</li>
+<li>Cost per hourly replacement: about $2,706 in hard dollars (same source). Add lost productivity if you track it.</li></ul>
+<p>Replace the defaults with your own numbers: departures in the last 12 months divided by average headcount, and your real recruiting and training hours multiplied by your average wage.</p>
+<h2>What to do with the number</h2>
+<p>Track it monthly next to food cost and labor cost. If it is above 2% of sales, a $1 or $2 wage adjustment on your hardest-to-staff positions usually costs less than the churn it prevents.</p>
+<p>Read the guide: <a href="https://primecostlab.github.io/blog/restaurant-employee-turnover-cost/">Restaurant Employee Turnover Cost: Calculate What You Lose</a>.</p>
+</article>
+<section class="cta"><div><h2>Put it in your P&amp;L</h2><p>The <a href="https://primecostlab.github.io/toolkit/">Restaurant Financial Toolkit</a> ($79) carries this turnover line into a 12-month P&amp;L, the break-even and a 3-year projection, next to 76 other assumptions. Start with the <a href="https://finoutils.gumroad.com/l/free-food-cost-calculator">free calculator</a> for food, beverage, labor and prime cost.</p><a class="btn" href="https://finoutils.gumroad.com/l/restaurant-financial-toolkit">Restaurant Financial Toolkit · $79</a></div></section>
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var f=function(n){return "$"+Math.round(n).toLocaleString("en-US")};
+  function calc(){
+    var hc=+$("hc").value||0, tr=(+$("tr").value||0)/100, cd=+$("cd").value||0, ms=+$("ms").value||0;
+    var dep=hc*tr, year=dep*cd, month=year/12;
+    $("o-dep").textContent=dep.toFixed(1); $("o-year").textContent=f(year); $("o-month").textContent=f(month);
+    $("o-pct").textContent= ms>0 ? (100*month/ms).toFixed(1)+"%" : "—";
+    $("o-note").textContent= hc+" × "+Math.round(tr*100)+"% × "+f(cd)+" = "+f(year)+" per year ÷ 12 = "+f(month)+" per month"+(ms>0?" = "+(100*month/ms).toFixed(1)+"% of monthly sales.":".");
+  }
+  ["hc","tr","cd","ms"].forEach(function(i){ $(i).addEventListener("input",calc); }); calc();
+})();
+</script>
+<footer><div class="in"><div>© 2026 PrimeCost Lab · Every benchmark sourced · Every formula validated by code</div><div>Support: <a href="mailto:outilfinance@gmail.com">outilfinance@gmail.com</a></div></div></footer>
+</body></html>

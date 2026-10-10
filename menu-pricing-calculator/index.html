@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="p:domain_verify" content="8e739a3c2a529c1dfc877c7d9838a3f6">
+<title>Menu Pricing Calculator (free, online: recipe cost ÷ target food cost %) · PrimeCost Lab</title>
+<meta name="description" content="Free online menu pricing calculator: recipe cost ÷ target food cost % = suggested price, with rounding, contribution margin and the real food cost % of your current price.">
+<link rel="canonical" href="https://primecostlab.github.io/menu-pricing-calculator/">
+<meta property="og:title" content="Menu Pricing Calculator (free, online: recipe cost ÷ target food cost %) · PrimeCost Lab"><meta property="og:description" content="Free online menu pricing calculator: recipe cost ÷ target food cost % = suggested price, with rounding, contribution margin and the real food cost % of your current price.">
+<meta property="og:type" content="website"><meta property="og:image" content="https://primecostlab.github.io/img/cover_paid.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://primecostlab.github.io/style.css">
+</head><body>
+<header class="top"><div class="nav"><a class="brand" href="https://primecostlab.github.io/">PrimeCost <span>Lab</span></a>
+<div class="links"><a href="https://primecostlab.github.io/#tools">Calculators</a><a href="https://primecostlab.github.io/#articles">Guides</a><a href="https://primecostlab.github.io/toolkit/">Toolkit</a><a href="https://primecostlab.github.io/bar-tracker/">Bar Tracker</a><a href="https://primecostlab.github.io/free-food-cost-calculator/">Free download</a><a class="btn" href="https://finoutils.gumroad.com/l/free-food-cost-calculator">Get the free calculator</a></div></div></header>
+<section class="hero"><div><div class="kicker">Free online calculator · nothing is sent anywhere</div>
+<h1>Menu pricing calculator</h1>
+<p class="lead">Recipe cost and target food cost % give the suggested price. Enter your current price to see its real food cost % and contribution margin.</p>
+<div class="benef"><div><b>Rounding you choose</b>Nearest $0.25, $0.50, $1 or $x.95.</div><div><b>Contribution margin in dollars</b>Because a 30% item at $4 and a 40% item at $30 do not pay the same rent.</div><div><b>20-item version in the Toolkit</b>With menu mix and category targets.</div></div>
+</div><div class="calc" id="calc"><h3>One menu item</h3>
+<div class="row2"><label>Recipe cost ($) <span class="hint">all ingredients, incl. garnish and waste</span><input id="rc" type="number" min="0" step="0.05" value="4.20"></label><label>Target food cost %<input id="tf" type="number" min="1" max="99" step="1" value="30"></label></div>
+<div class="row2"><label>Current menu price ($, optional)<input id="mp" type="number" min="0" step="0.25" value="13.50"></label><label>Round suggested price to<select id="rd"><option value="0.25">nearest $0.25 up</option><option value="0.5">nearest $0.50 up</option><option value="1">nearest $1 up</option><option value="0.95">$x.95</option></select></label></div>
+<div class="out four"><div><span>Suggested price</span><b id="o-price">—</b><small id="o-raw"></small></div><div><span>Contribution margin / item</span><b id="o-cm">—</b><small>at the suggested price</small></div><div id="d-act"><span>Food cost % at current price</span><b id="o-act">—</b><small id="o-actn">vs your target</small></div><div><span>Margin at current price</span><b id="o-cmc">—</b></div></div>
+<p class="note" id="o-note"></p></div></section>
+<article><h2>The formula and its limit</h2>
+<p><strong>Menu price = recipe cost ÷ target food cost %.</strong> It is the right starting point and the wrong stopping point: a 30% target on a $1.20 side gives $4, which may be too low for your concept, while a $12 recipe cost gives $40, which your guests may not pay. Price the item, then check the contribution margin in dollars — that is what pays rent.</p>
+<h2>Target food cost by concept</h2>
+<p>Full-service restaurants run 28–35% food cost (MarginEdge, 2026); bars run 18–24% beverage cost (Backbar Academy, 2019); cafes run 20–25% on coffee (Zest Specialty Coffee Roasters, 2025). A single item can sit far from the average as long as the menu mix lands on target — which is what the Toolkit's Menu Pricing sheet computes across 20 items.</p>
+<h2>Recipe cost done right</h2>
+<p>Cost every ingredient at the price you actually pay per unit, include garnish, bread, oil and packaging, and add a waste factor (3–5% is common). Recost quarterly: suppliers move prices more often than menus do.</p>
+<p>Read the guide: <a href="https://primecostlab.github.io/blog/how-to-price-a-menu-item-based-on-food-cost/">How to Price a Menu Item Based on Food Cost</a>.</p></article>
+<section class="ctabox"><div class="in"><h3>Keep these numbers every month</h3><p>The free Excel / Google Sheets calculator does this for a full month from 7 POS numbers. The <a href="https://primecostlab.github.io/toolkit/">Restaurant Financial Toolkit</a> ($79) carries them into a 12-month P&amp;L, break-even, menu pricing and a 3-year projection a lender can read.</p><a class="btn" href="https://finoutils.gumroad.com/l/free-food-cost-calculator">Download the free calculator</a> &nbsp; <a class="btn ghost" href="https://finoutils.gumroad.com/l/restaurant-financial-toolkit">Restaurant Financial Toolkit · $79</a></div></section>
+<script>(function(){var $=function(i){return document.getElementById(i)};var money=function(n){return "$"+Math.round(n).toLocaleString("en-US")};var pct=function(n){return (Math.round(n*10)/10).toFixed(1)+"%"};
+function band(el,v,lo,hi){el.className=(v<=0||isNaN(v))?"":(v<=hi&&v>=lo?"ok":(v<lo||v<=hi+3?"warn":"bad"));}
+function calc(){var rc=+$("rc").value||0,tf=(+$("tf").value||30)/100,mp=+$("mp").value||0,rd=$("rd").value;
+var raw=tf>0?rc/tf:0,price=raw;if(rd==="0.95"){price=Math.ceil(raw)-0.05;if(price<raw)price+=1;}else{var step=+rd;price=Math.ceil(raw/step)*step;}
+$("o-price").textContent=raw>0?"$"+price.toFixed(2):"—";$("o-raw").textContent=raw>0?("exact: $"+raw.toFixed(2)):"";$("o-cm").textContent=raw>0?"$"+(price-rc).toFixed(2):"—";
+var act=mp>0?100*rc/mp:NaN;$("o-act").textContent=isNaN(act)?"—":pct(act);$("o-cmc").textContent=mp>0?"$"+(mp-rc).toFixed(2):"—";
+var d=$("d-act");d.className=isNaN(act)?"":(act<=tf*100?"ok":(act<=tf*100+3?"warn":"bad"));$("o-actn").textContent=isNaN(act)?"vs your target":("target "+Math.round(tf*100)+"%");
+$("o-note").textContent="Price = recipe cost ÷ target food cost = $"+rc.toFixed(2)+" ÷ "+Math.round(tf*100)+"% = $"+raw.toFixed(2)+", rounded to $"+price.toFixed(2)+"."+(mp>0?" At $"+mp.toFixed(2)+" this item runs "+pct(act)+" food cost.":"");}
+Array.prototype.forEach.call(document.querySelectorAll("#calc input, #calc select"),function(e){e.addEventListener("input",calc);e.addEventListener("change",calc)});calc();})();</script>
+<footer><div class="in"><div>© 2026 PrimeCost Lab · Every benchmark sourced · Every formula validated by code</div><div>Support: <a href="mailto:outilfinance@gmail.com">outilfinance@gmail.com</a></div></div></footer>
+</body></html>

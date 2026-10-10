@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="p:domain_verify" content="8e739a3c2a529c1dfc877c7d9838a3f6">
+<title>Food Cost &amp; Prime Cost Calculator (free, online, sourced benchmarks) · PrimeCost Lab</title>
+<meta name="description" content="Free online restaurant food cost and prime cost calculator: inventory method, beverage cost, labor cost, prime cost, color-coded against sourced industry benchmarks.">
+<link rel="canonical" href="https://primecostlab.github.io/food-cost-calculator/">
+<meta property="og:title" content="Food Cost &amp; Prime Cost Calculator (free, online, sourced benchmarks) · PrimeCost Lab"><meta property="og:description" content="Free online restaurant food cost and prime cost calculator: inventory method, beverage cost, labor cost, prime cost, color-coded against sourced industry benchmarks.">
+<meta property="og:type" content="website"><meta property="og:image" content="https://primecostlab.github.io/img/cover_paid.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://primecostlab.github.io/style.css">
+</head><body>
+<header class="top"><div class="nav"><a class="brand" href="https://primecostlab.github.io/">PrimeCost <span>Lab</span></a>
+<div class="links"><a href="https://primecostlab.github.io/#tools">Calculators</a><a href="https://primecostlab.github.io/#articles">Guides</a><a href="https://primecostlab.github.io/toolkit/">Toolkit</a><a href="https://primecostlab.github.io/bar-tracker/">Bar Tracker</a><a href="https://primecostlab.github.io/free-food-cost-calculator/">Free download</a><a class="btn" href="https://finoutils.gumroad.com/l/free-food-cost-calculator">Get the free calculator</a></div></div></header>
+<section class="hero"><div><div class="kicker">Free online calculator · nothing is sent anywhere</div>
+<h1>Food cost &amp; prime cost calculator</h1>
+<p class="lead">Enter last month's numbers from your POS and your two inventory counts. Get food cost, beverage cost, labor cost and prime cost, color-coded against sourced benchmarks.</p>
+<div class="benef"><div><b>Inventory method</b>Beginning + purchases − ending, the way an accountant or a lender computes it.</div><div><b>Sourced benchmarks</b>MarginEdge 2026, Backbar 2019, National Restaurant Association 2025, Restaurant365.</div><div><b>Same math as the free Excel</b>Download the spreadsheet version to keep a month-by-month history.</div></div>
+</div><div class="calc" id="calc"><h3>Last closed month</h3>
+<div class="row2"><label>Total sales ($)<input id="ts" type="number" min="0" step="1000" value="120000"></label><label>Food sales ($)<input id="fs" type="number" min="0" step="1000" value="90000"></label></div>
+<div class="row2"><label>Food inventory, start ($)<input id="fb" type="number" min="0" step="100" value="9000"></label><label>Food inventory, end ($)<input id="fe" type="number" min="0" step="100" value="8500"></label></div>
+<label>Food purchases ($)<input id="fp" type="number" min="0" step="100" value="28000"></label>
+<div class="row2"><label>Beverage sales ($)<input id="bs" type="number" min="0" step="1000" value="30000"></label><label>Beverage purchases ($)<input id="bp" type="number" min="0" step="100" value="6500"></label></div>
+<div class="row2"><label>Beverage inventory, start ($)<input id="bb" type="number" min="0" step="100" value="4000"></label><label>Beverage inventory, end ($)<input id="be" type="number" min="0" step="100" value="4200"></label></div>
+<label>Total labor cost ($) <span class="hint">wages, payroll taxes, benefits</span><input id="lc" type="number" min="0" step="100" value="40000"></label>
+<div class="out four"><div id="d-food"><span>Food cost %</span><b id="o-food">—</b><small>benchmark 28–35% (MarginEdge, 2026)</small></div><div id="d-bev"><span>Beverage cost %</span><b id="o-bev">—</b><small>benchmark 18–24% (Backbar Academy, 2019)</small></div><div id="d-lab"><span>Labor cost %</span><b id="o-lab">—</b><small>benchmark 34–37% (National Restaurant Association, 2025)</small></div><div id="d-prime"><span>Prime cost %</span><b id="o-prime">—</b><small>benchmark 60–65% (Restaurant365)</small></div></div>
+<p class="note" id="o-note"></p></div></section>
+<article><h2>How the calculator works</h2>
+<p>Cost of goods sold uses the inventory method: <strong>beginning inventory + purchases − ending inventory</strong>. Food cost % divides food COGS by food sales (not total sales), beverage cost % does the same for the bar, and prime cost adds total labor to both COGS and divides by total sales. These are the four ratios a lender or a buyer will ask for first.</p>
+<h2>How to read the colors</h2>
+<ul><li><strong>Green</strong>: inside the sourced benchmark range. <strong>Yellow</strong>: below the range (check your counts: an unusually low food cost often means a missed inventory) or up to 3 points above it. <strong>Red</strong>: more than 3 points above — pricing, portioning, waste or theft.</li>
+<li>Benchmarks: food cost 28–35% (<a href="https://www.marginedge.com/blog/restaurant-food-cost-percentage" rel="nofollow">MarginEdge, 2026</a>); beverage cost 18–24% (<a href="https://www.backbarapp.com/academy" rel="nofollow">Backbar Academy, 2019</a>); labor 34.2–36.5% (<a href="https://restaurant.org/research-and-media/research/" rel="nofollow">National Restaurant Association, 2025</a>); prime cost 60–65% (<a href="https://www.restaurant365.com/blog/" rel="nofollow">Restaurant365</a>). A cafe or a bar sits at different points of these ranges; the Toolkit's presets carry segment-specific targets.</li></ul>
+<h2>Why count inventory</h2>
+<p>Purchases alone overstate cost in a month you stock up and understate it the month after. Two inventory counts, thirty days apart, are what make the number comparable month to month. Count the same day of the week, at the same time, before deliveries.</p>
+<p>Read the guide: <a href="https://primecostlab.github.io/blog/how-to-calculate-prime-cost-for-a-restaurant/">How to Calculate Prime Cost for a Restaurant (Formula + Example)</a>.</p></article>
+<section class="ctabox"><div class="in"><h3>Keep these numbers every month</h3><p>The free Excel / Google Sheets calculator does this for a full month from 7 POS numbers. The <a href="https://primecostlab.github.io/toolkit/">Restaurant Financial Toolkit</a> ($79) carries them into a 12-month P&amp;L, break-even, menu pricing and a 3-year projection a lender can read.</p><a class="btn" href="https://finoutils.gumroad.com/l/free-food-cost-calculator">Download the free calculator</a> &nbsp; <a class="btn ghost" href="https://finoutils.gumroad.com/l/restaurant-financial-toolkit">Restaurant Financial Toolkit · $79</a></div></section>
+<script>(function(){var $=function(i){return document.getElementById(i)};var money=function(n){return "$"+Math.round(n).toLocaleString("en-US")};var pct=function(n){return (Math.round(n*10)/10).toFixed(1)+"%"};
+function band(el,v,lo,hi){el.className=(v<=0||isNaN(v))?"":(v<=hi&&v>=lo?"ok":(v<lo||v<=hi+3?"warn":"bad"));}
+function calc(){var ts=+$("ts").value||0,fs=+$("fs").value||0,fb=+$("fb").value||0,fe=+$("fe").value||0,fp=+$("fp").value||0,bs=+$("bs").value||0,bp=+$("bp").value||0,bb=+$("bb").value||0,be=+$("be").value||0,lc=+$("lc").value||0;
+var fc=fb+fp-fe,bc=bb+bp-be,food=fs>0?100*fc/fs:0,bev=bs>0?100*bc/bs:0,lab=ts>0?100*lc/ts:0,prime=ts>0?100*(fc+bc+lc)/ts:0;
+$("o-food").textContent=fs>0?pct(food):"—";$("o-bev").textContent=bs>0?pct(bev):"—";$("o-lab").textContent=ts>0?pct(lab):"—";$("o-prime").textContent=ts>0?pct(prime):"—";
+band($("d-food"),food,28,35);band($("d-bev"),bev,18,24);band($("d-lab"),lab,34.2,36.5);band($("d-prime"),prime,60,65);
+$("o-note").textContent="Food COGS = "+money(fb)+" + "+money(fp)+" − "+money(fe)+" = "+money(fc)+". Beverage COGS = "+money(bc)+". Prime cost = COGS "+money(fc+bc)+" + labor "+money(lc)+" = "+money(fc+bc+lc)+(ts>0?" = "+pct(prime)+" of sales.":".");}
+Array.prototype.forEach.call(document.querySelectorAll("#calc input, #calc select"),function(e){e.addEventListener("input",calc);e.addEventListener("change",calc)});calc();})();</script>
+<footer><div class="in"><div>© 2026 PrimeCost Lab · Every benchmark sourced · Every formula validated by code</div><div>Support: <a href="mailto:outilfinance@gmail.com">outilfinance@gmail.com</a></div></div></footer>
+</body></html>

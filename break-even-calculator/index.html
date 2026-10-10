@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="p:domain_verify" content="8e739a3c2a529c1dfc877c7d9838a3f6">
+<title>Restaurant Break-Even Calculator (free, online: covers per day, per seat, margin of safety) · PrimeCost Lab</title>
+<meta name="description" content="Free online restaurant break-even calculator: fixed costs ÷ contribution margin per cover. Break-even sales, covers per month, per day, per seat and margin of safety.">
+<link rel="canonical" href="https://primecostlab.github.io/break-even-calculator/">
+<meta property="og:title" content="Restaurant Break-Even Calculator (free, online: covers per day, per seat, margin of safety) · PrimeCost Lab"><meta property="og:description" content="Free online restaurant break-even calculator: fixed costs ÷ contribution margin per cover. Break-even sales, covers per month, per day, per seat and margin of safety.">
+<meta property="og:type" content="website"><meta property="og:image" content="https://primecostlab.github.io/img/cover_paid.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://primecostlab.github.io/style.css">
+</head><body>
+<header class="top"><div class="nav"><a class="brand" href="https://primecostlab.github.io/">PrimeCost <span>Lab</span></a>
+<div class="links"><a href="https://primecostlab.github.io/#tools">Calculators</a><a href="https://primecostlab.github.io/#articles">Guides</a><a href="https://primecostlab.github.io/toolkit/">Toolkit</a><a href="https://primecostlab.github.io/bar-tracker/">Bar Tracker</a><a href="https://primecostlab.github.io/free-food-cost-calculator/">Free download</a><a class="btn" href="https://finoutils.gumroad.com/l/free-food-cost-calculator">Get the free calculator</a></div></div></header>
+<section class="hero"><div><div class="kicker">Free online calculator · nothing is sent anywhere</div>
+<h1>Restaurant break-even calculator</h1>
+<p class="lead">Fixed costs, average check and variable cost %: get break-even sales, covers per month, per day and per seat, and your margin of safety.</p>
+<div class="benef"><div><b>Per day and per seat</b>Turns a monthly figure into the number a manager can watch at the door.</div><div><b>Margin of safety</b>The ratio a lender looks at right after prime cost.</div><div><b>Runs in your browser</b>No email, no download, no data leaves this page.</div></div>
+</div><div class="calc" id="calc"><h3>Your month</h3>
+<label>Fixed costs per month ($) <span class="hint">rent, insurance, salaries, loan payments, utilities base, software</span><input id="fx" type="number" min="0" step="500" value="42000"></label>
+<div class="row2"><label>Average check ($)<input id="ac" type="number" min="0" step="0.5" value="38"></label><label>Variable cost % of sales <span class="hint">food + beverage cost %, plus hourly labor if it flexes</span><input id="vc" type="number" min="0" max="99" step="1" value="45"></label></div>
+<div class="row2"><label>Days open per month<input id="dd" type="number" min="1" max="31" step="1" value="26"></label><label>Seats<input id="st" type="number" min="1" step="1" value="80"></label></div>
+<label>Current monthly sales ($, optional)<input id="cs" type="number" min="0" step="1000" value="120000"></label>
+<div class="out four"><div><span>Break-even sales / month</span><b id="o-sales">—</b></div><div><span>Covers / month</span><b id="o-cov">—</b></div><div><span>Covers / day</span><b id="o-day">—</b><small id="o-seat"></small></div><div id="d-mos"><span>Margin of safety</span><b id="o-mos">—</b><small>how far current sales sit above break-even</small></div></div>
+<p class="note" id="o-note"></p></div></section>
+<article><h2>What break-even means here</h2>
+<p>The number of covers (or the sales) at which contribution margin exactly covers fixed costs. <strong>Fixed costs ÷ contribution margin per cover = break-even covers.</strong> Contribution margin per cover is the average check minus everything that scales with each sale: food and beverage cost, and hourly labor if you flex schedules with volume.</p>
+<h2>Which costs are fixed</h2>
+<p>Rent, insurance, management salaries, loan payments, the base part of utilities, software and fees. Treat hourly labor as fixed if you keep the same schedule whatever the volume, and as variable if you cut shifts on slow days — pick one and stay consistent.</p>
+<h2>Margin of safety</h2>
+<p>How far current sales are above break-even, as a share of sales. Below 10–15% a bad month puts you in the red; a lender will read it the same way. The <a href="https://primecostlab.github.io/toolkit/">Toolkit</a> computes it per service and per seat, with loan payments included, and shows the sensitivity of break-even to average check and to food cost.</p>
+<p>Read the guide: <a href="https://primecostlab.github.io/blog/how-to-calculate-restaurant-break-even-point/">How to Calculate Restaurant Break-Even Point (Formula + Example)</a>.</p></article>
+<section class="ctabox"><div class="in"><h3>Keep these numbers every month</h3><p>The free Excel / Google Sheets calculator does this for a full month from 7 POS numbers. The <a href="https://primecostlab.github.io/toolkit/">Restaurant Financial Toolkit</a> ($79) carries them into a 12-month P&amp;L, break-even, menu pricing and a 3-year projection a lender can read.</p><a class="btn" href="https://finoutils.gumroad.com/l/free-food-cost-calculator">Download the free calculator</a> &nbsp; <a class="btn ghost" href="https://finoutils.gumroad.com/l/restaurant-financial-toolkit">Restaurant Financial Toolkit · $79</a></div></section>
+<script>(function(){var $=function(i){return document.getElementById(i)};var money=function(n){return "$"+Math.round(n).toLocaleString("en-US")};var pct=function(n){return (Math.round(n*10)/10).toFixed(1)+"%"};
+function band(el,v,lo,hi){el.className=(v<=0||isNaN(v))?"":(v<=hi&&v>=lo?"ok":(v<lo||v<=hi+3?"warn":"bad"));}
+function calc(){var fx=+$("fx").value||0,ac=+$("ac").value||0,vc=(+$("vc").value||0)/100,dd=+$("dd").value||26,st=+$("st").value||1,cs=+$("cs").value||0;
+var cm=1-vc,cmc=ac*cm,sales=cm>0?fx/cm:0,cov=cmc>0?fx/cmc:0,day=cov/dd,seat=day/st,mos=cs>0&&sales>0?100*(cs-sales)/cs:NaN;
+$("o-sales").textContent=sales>0?money(sales):"—";$("o-cov").textContent=cov>0?Math.ceil(cov).toLocaleString("en-US"):"—";$("o-day").textContent=cov>0?Math.ceil(day):"—";
+$("o-seat").textContent=cov>0?(seat.toFixed(2)+" turns per seat per day"):"";
+$("o-mos").textContent=isNaN(mos)?"—":pct(mos);var d=$("d-mos");d.className=isNaN(mos)?"":(mos>=15?"ok":(mos>=0?"warn":"bad"));
+$("o-note").textContent="Contribution margin per cover = "+money(ac)+" × (1 − "+Math.round(vc*100)+"%) = $"+cmc.toFixed(2)+". Break-even = "+money(fx)+" ÷ $"+cmc.toFixed(2)+" = "+Math.ceil(cov)+" covers a month = "+Math.ceil(day)+" a day over "+dd+" days.";}
+Array.prototype.forEach.call(document.querySelectorAll("#calc input, #calc select"),function(e){e.addEventListener("input",calc);e.addEventListener("change",calc)});calc();})();</script>
+<footer><div class="in"><div>© 2026 PrimeCost Lab · Every benchmark sourced · Every formula validated by code</div><div>Support: <a href="mailto:outilfinance@gmail.com">outilfinance@gmail.com</a></div></div></footer>
+</body></html>
