@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="p:domain_verify" content="8e739a3c2a529c1dfc877c7d9838a3f6">
+<title>Latte Pricing Calculator (free, online: cost per drink and suggested price) · PrimeCost Lab</title>
+<meta name="description" content="Free online latte and coffee drink cost calculator: coffee dose, bean price, milk and cup cost, drink cost % at your price and a suggested menu price.">
+<link rel="canonical" href="https://primecostlab.github.io/latte-pricing-calculator/">
+<meta property="og:title" content="Latte Pricing Calculator (free, online: cost per drink and suggested price) · PrimeCost Lab"><meta property="og:description" content="Free online latte and coffee drink cost calculator: coffee dose, bean price, milk and cup cost, drink cost % at your price and a suggested menu price.">
+<meta property="og:type" content="website"><meta property="og:image" content="https://primecostlab.github.io/img/vert_toolkit_cover.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="https://primecostlab.github.io/files/favicon.svg" type="image/svg+xml"><link rel="icon" href="https://primecostlab.github.io/files/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="https://primecostlab.github.io/files/favicon-180.png">
+<link rel="stylesheet" href="https://primecostlab.github.io/style.css">
+</head><body>
+<header class="top"><div class="nav"><a class="brand" href="https://primecostlab.github.io/">PrimeCost <span>Lab</span></a>
+<div class="links"><a href="https://primecostlab.github.io/#tools">Calculators</a><a href="https://primecostlab.github.io/#articles">Guides</a><a href="https://primecostlab.github.io/toolkit/">Toolkit</a><a href="https://primecostlab.github.io/bar-tracker/">Bar Tracker</a><a href="https://primecostlab.github.io/free-food-cost-calculator/">Free download</a><a href="https://primecostlab.github.io/fr/" hreflang="fr">Français</a><a class="btn" href="https://finoutils.gumroad.com/l/free-food-cost-calculator">Get the free calculator</a></div></div></header>
+<section class="hero"><div><div class="kicker">Free online calculator · nothing is sent anywhere</div>
+<h1>Latte &amp; coffee drink pricing calculator</h1>
+<p class="lead">Dose, bean price, milk and cup: get the real cost of a latte, cappuccino or flat white, its cost % at your current price and a suggested price at your target.</p>
+<div class="benef"><div><b>Pounds or kilos, gallons or litres</b>Use the units on your supplier invoices.</div><div><b>Every part shown</b>Coffee, milk and cup cost split so you see what moves the number.</div><div><b>Sourced range</b>Cafe beverage cost 20–25% (Zest Specialty Coffee Roasters, 2025).</div></div>
+</div><div class="calc" id="calc"><h3>One drink</h3>
+<div class="row2"><label>Coffee dose (g)<input id="dg" type="number" min="0" step="0.5" value="18"></label><label>Bean price ($)<input id="bp" type="number" min="0" step="0.5" value="16"></label></div>
+<label>Bean price is per<select id="bu"><option value="lb">pound (lb)</option><option value="kg">kilogram (kg)</option></select></label>
+<div class="row2"><label>Milk used<input id="mu" type="number" min="0" step="10" value="8"></label><label>Milk amount unit<select id="mau"><option value="oz">fl oz</option><option value="ml">ml</option></select></label></div>
+<div class="row2"><label>Milk price ($)<input id="mp" type="number" min="0" step="0.1" value="4.50"></label><label>Milk price is per<select id="mpu"><option value="gal">US gallon</option><option value="l">litre</option></select></label></div>
+<div class="row2"><label>Cup, lid, sleeve ($)<input id="cu" type="number" min="0" step="0.01" value="0.22"></label><label>Syrup, other ($)<input id="sy" type="number" min="0" step="0.05" value="0"></label></div>
+<div class="row2"><label>Target drink cost %<input id="tg" type="number" min="1" max="99" step="1" value="22"></label><label>Current price ($, optional)<input id="cp" type="number" min="0" step="0.05" value="5.25"></label></div>
+<div class="out four"><div><span>Cost per drink</span><b id="o-cost">—</b><small id="o-split"></small></div><div><span>Suggested price</span><b id="o-sug">—</b><small id="o-sugn"></small></div><div id="d-act"><span>Drink cost % at current price</span><b id="o-act">—</b><small>cafe range 20–25% (Zest, 2025)</small></div><div><span>Margin per drink</span><b id="o-cm">—</b><small>at the current price</small></div></div>
+<p class="note" id="o-note"></p></div></section>
+<article><h2>The formula</h2>
+<p><strong>Drink cost = coffee + milk + cup and lid + syrup.</strong> Coffee is the dose in grams times the price per gram of beans; milk is the volume used times the price per litre. Divide by the menu price to get the drink cost %, or divide by your target % to get a price.</p>
+<h2>What range to aim for</h2>
+<p>Coffee-industry sources put cafe beverage cost around 20–25% of the price (<a href="https://www.zestcoffee.com.au/blogs/news/6-key-benchmarks-every-cafe-owner-in-australia-should-know" rel="nofollow">Zest Specialty Coffee Roasters, 2025</a>). It is an Australian roaster's benchmark and there is no North American association figure for it, so treat it as indicative. Milk drinks usually cost more than black coffee, so look at the whole menu mix, not one drink.</p>
+<h2>What this does not include</h2>
+<p>Labor, rent and waste are not in the cost of one drink. They are why a 22% drink cost still leaves a thin profit: labor alone often runs 30–35% of sales in a cafe (same source). Track both monthly with the free calculator.</p>
+<p>Read the guide: <a href="https://primecostlab.github.io/blog/how-to-price-a-latte/">How to Price a Latte: Formula, Cost Breakdown &amp; Profit</a>.</p></article>
+<section class="ctabox"><div class="in"><h3>Price the whole menu, not one drink</h3><p>The free calculator tracks your monthly food, beverage, labor and prime cost. The <a href="https://primecostlab.github.io/toolkit/">Restaurant Financial Toolkit</a> ($79) includes a cafe / food truck preset, menu pricing for 20 items, break-even per day and a 3-year projection.</p><a class="btn" href="https://finoutils.gumroad.com/l/free-food-cost-calculator">Download the free calculator</a> &nbsp; <a class="btn ghost" href="https://finoutils.gumroad.com/l/restaurant-financial-toolkit">Toolkit · $79</a><ul class="trust"><li>Secure checkout by Gumroad</li><li>Instant download</li><li>Excel 2016+ and Google Sheets</li><li><a href="https://primecostlab.github.io/refunds/">14-day refund</a></li><li>Questions answered by the person who built it</li></ul></div></section>
+<script>(function(){var $=function(i){return document.getElementById(i)};var money=function(n){return "$"+Math.round(n).toLocaleString("en-US")};var pct=function(n){return (Math.round(n*10)/10).toFixed(1)+"%"};
+function band(el,v,lo,hi){el.className=(v<=0||isNaN(v))?"":(v<=hi&&v>=lo?"ok":(v<lo||v<=hi+3?"warn":"bad"));}
+function calc(){var dg=+$("dg").value||0,bp=+$("bp").value||0,perkg=$("bu").value==="lb"?bp/0.453592:bp,beans=dg/1000*perkg;
+var mu=+$("mu").value||0,litres=$("mau").value==="oz"?mu*0.0295735:mu/1000,mp=+$("mp").value||0,perl=$("mpu").value==="gal"?mp/3.78541:mp,milk=litres*perl;
+var cu=+$("cu").value||0,sy=+$("sy").value||0,cost=beans+milk+cu+sy,tg=(+$("tg").value||22)/100,cp=+$("cp").value||0,raw=tg>0?cost/tg:0,sug=Math.ceil(raw/0.05)*0.05;
+$("o-cost").textContent=cost>0?"$"+cost.toFixed(2):"—";$("o-split").textContent=cost>0?("coffee $"+beans.toFixed(2)+" · milk $"+milk.toFixed(2)+" · cup $"+cu.toFixed(2)):"";
+$("o-sug").textContent=cost>0?"$"+sug.toFixed(2):"—";$("o-sugn").textContent=cost>0?("at "+Math.round(tg*100)+"% drink cost"):"";
+var act=cp>0?100*cost/cp:NaN;$("o-act").textContent=isNaN(act)?"—":pct(act);band($("d-act"),act,20,25);$("o-cm").textContent=cp>0?"$"+(cp-cost).toFixed(2):"—";
+$("o-note").textContent=cost>0?("Coffee = "+dg+" g × $"+perkg.toFixed(2)+"/kg = $"+beans.toFixed(2)+". Milk = "+litres.toFixed(3)+" L × $"+perl.toFixed(2)+"/L = $"+milk.toFixed(2)+". Total $"+cost.toFixed(2)+(cp>0?" = "+pct(act)+" of $"+cp.toFixed(2)+".":".")):"";}
+Array.prototype.forEach.call(document.querySelectorAll("#calc input, #calc select"),function(e){e.addEventListener("input",calc);e.addEventListener("change",calc)});calc();})();</script>
+<footer><div class="in"><div>© 2026 PrimeCost Lab · Every benchmark sourced · Every formula validated by code</div><div class="links"><a href="https://primecostlab.github.io/sources/">Sources</a><a href="https://primecostlab.github.io/how-we-test/">How we test</a><a href="https://primecostlab.github.io/refunds/">Refunds</a><a href="https://primecostlab.github.io/privacy/">Privacy</a><a href="mailto:outilfinance@gmail.com">outilfinance@gmail.com</a></div></div></footer>
+</body></html>

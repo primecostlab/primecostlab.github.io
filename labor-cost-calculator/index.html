@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="p:domain_verify" content="8e739a3c2a529c1dfc877c7d9838a3f6">
+<title>Restaurant Labor Cost Percentage Calculator (free, online, with benchmarks) · PrimeCost Lab</title>
+<meta name="description" content="Free online restaurant labor cost calculator: wages, salaries, payroll taxes and benefits as a % of sales, compared with sourced ranges for restaurants, bars and cafes.">
+<link rel="canonical" href="https://primecostlab.github.io/labor-cost-calculator/">
+<meta property="og:title" content="Restaurant Labor Cost Percentage Calculator (free, online, with benchmarks) · PrimeCost Lab"><meta property="og:description" content="Free online restaurant labor cost calculator: wages, salaries, payroll taxes and benefits as a % of sales, compared with sourced ranges for restaurants, bars and cafes.">
+<meta property="og:type" content="website"><meta property="og:image" content="https://primecostlab.github.io/img/vert_toolkit_cover.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="https://primecostlab.github.io/files/favicon.svg" type="image/svg+xml"><link rel="icon" href="https://primecostlab.github.io/files/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="https://primecostlab.github.io/files/favicon-180.png">
+<link rel="stylesheet" href="https://primecostlab.github.io/style.css">
+</head><body>
+<header class="top"><div class="nav"><a class="brand" href="https://primecostlab.github.io/">PrimeCost <span>Lab</span></a>
+<div class="links"><a href="https://primecostlab.github.io/#tools">Calculators</a><a href="https://primecostlab.github.io/#articles">Guides</a><a href="https://primecostlab.github.io/toolkit/">Toolkit</a><a href="https://primecostlab.github.io/bar-tracker/">Bar Tracker</a><a href="https://primecostlab.github.io/free-food-cost-calculator/">Free download</a><a href="https://primecostlab.github.io/fr/" hreflang="fr">Français</a><a class="btn" href="https://finoutils.gumroad.com/l/free-food-cost-calculator">Get the free calculator</a></div></div></header>
+<section class="hero"><div><div class="kicker">Free online calculator · nothing is sent anywhere</div>
+<h1>Labor cost percentage calculator</h1>
+<p class="lead">Hours, wages, salaries and payroll taxes for the month: get total labor cost, labor cost % against the range for your type of business, and sales per labor hour.</p>
+<div class="benef"><div><b>Benefits included</b>The way the National Restaurant Association measures it, so the comparison is fair.</div><div><b>Restaurant, bar or cafe</b>The benchmark changes with the type of business.</div><div><b>Sales per labor hour</b>The number schedulers use week to week.</div></div>
+</div><div class="calc" id="calc"><h3>Last month</h3>
+<label>Type of business<select id="sg"><option value="fsr">Full-service restaurant</option><option value="bar">Bar</option><option value="cafe">Cafe / food truck</option></select></label>
+<div class="row2"><label>Hourly hours worked<input id="hh" type="number" min="0" step="10" value="2400"></label><label>Average hourly wage ($)<input id="hw" type="number" min="0" step="0.25" value="17.50"></label></div>
+<div class="row2"><label>Salaried pay for the month ($)<input id="sp" type="number" min="0" step="100" value="9000"></label><label>Payroll taxes &amp; benefits (% of pay) <span class="hint">your payroll report</span><input id="pt" type="number" min="0" step="0.5" value="15"></label></div>
+<label>Total sales for the month ($)<input id="ts" type="number" min="0" step="1000" value="150000"></label>
+<div class="out four"><div><span>Total labor cost</span><b id="o-tot">—</b><small id="o-split"></small></div><div id="d-lab"><span>Labor cost %</span><b id="o-lab">—</b><small id="o-bm"></small></div><div><span>Sales per labor hour</span><b id="o-splh">—</b><small>sales ÷ hourly hours</small></div><div><span>Labor cost per hourly hour</span><b id="o-lph">—</b><small>wage + taxes &amp; benefits</small></div></div>
+<p class="note" id="o-note"></p></div></section>
+<article><h2>The formula</h2>
+<p><strong>Labor cost % = (wages + salaries + payroll taxes + benefits) ÷ total sales.</strong> Use the payroll for the same period as the sales, and include the owner's salary if the owner works a regular shift; otherwise your percentage looks better than the business really is.</p>
+<h2>What is normal</h2>
+<ul><li><strong>Full-service restaurant:</strong> median 34.2% for profitable operators and 36.5% for all operators, benefits included (<a href="https://restaurant.org/research-and-media/research/restaurant-economic-insights/analysis-commentary/elevated-labor-costs-had-a-significant-impact-on-restaurant-profitability-in-2024/" rel="nofollow">National Restaurant Association, 2025</a>).</li>
+<li><strong>Bar:</strong> 25–35% (<a href="https://www.sculpturehospitality.com/blog/calculating-labour-cost-guide-for-bar-owners" rel="nofollow">Sculpture Hospitality, 2025</a>, an inventory-software publisher).</li>
+<li><strong>Cafe:</strong> 30–35% (<a href="https://www.zestcoffee.com.au/blogs/news/6-key-benchmarks-every-cafe-owner-in-australia-should-know" rel="nofollow">Zest Specialty Coffee Roasters, 2025</a>, indicative).</li></ul>
+<h2>Labor alone is half the story</h2>
+<p>Add food and beverage cost to labor and you get prime cost, the number lenders look at first: 60–65% of sales for full service (<a href="https://www.restaurant365.com/blog/how-to-calculate-prime-cost-in-a-restaurant/" rel="nofollow">Restaurant365</a>). The <a href="https://primecostlab.github.io/food-cost-calculator/">prime cost calculator</a> does both in one step.</p>
+<p>Read the guide: <a href="https://primecostlab.github.io/blog/restaurant-labor-cost-percentage-including-benefits/">Restaurant Labor Cost Percentage Including Benefits: What to Count and What Is Normal</a>.</p></article>
+<section class="ctabox"><div class="in"><h3>Keep these numbers every month</h3><p>The free Excel / Google Sheets calculator does this for a full month from 10 numbers. The <a href="https://primecostlab.github.io/toolkit/">Restaurant Financial Toolkit</a> ($79) carries them into a 12-month P&amp;L, break-even, menu pricing and a 3-year projection a lender can read.</p><a class="btn" href="https://finoutils.gumroad.com/l/free-food-cost-calculator">Download the free calculator</a> &nbsp; <a class="btn ghost" href="https://finoutils.gumroad.com/l/restaurant-financial-toolkit">Restaurant Financial Toolkit · $79</a><ul class="trust"><li>Secure checkout by Gumroad</li><li>Instant download</li><li>Excel 2016+ and Google Sheets</li><li><a href="https://primecostlab.github.io/refunds/">14-day refund</a></li><li>Questions answered by the person who built it</li></ul></div></section>
+<script>(function(){var $=function(i){return document.getElementById(i)};var money=function(n){return "$"+Math.round(n).toLocaleString("en-US")};var pct=function(n){return (Math.round(n*10)/10).toFixed(1)+"%"};
+function band(el,v,lo,hi){el.className=(v<=0||isNaN(v))?"":(v<=hi&&v>=lo?"ok":(v<lo||v<=hi+3?"warn":"bad"));}
+var BM={fsr:[34.2,36.5,"National Restaurant Association, 2025"],bar:[25,35,"Sculpture Hospitality, 2025"],cafe:[30,35,"Zest Specialty Coffee Roasters, 2025"]};
+function calc(){var b=BM[$("sg").value],hh=+$("hh").value||0,hw=+$("hw").value||0,sp=+$("sp").value||0,pt=(+$("pt").value||0)/100,ts=+$("ts").value||0;
+var hourly=hh*hw,pay=hourly+sp,tot=pay*(1+pt),lab=ts>0?100*tot/ts:NaN;
+$("o-tot").textContent=tot>0?money(tot):"—";$("o-split").textContent=tot>0?("hourly "+money(hourly)+" · salaried "+money(sp)+" · taxes & benefits "+money(pay*pt)):"";
+$("o-lab").textContent=isNaN(lab)?"—":pct(lab);band($("d-lab"),lab,b[0],b[1]);$("o-bm").textContent="range "+b[0]+"–"+b[1]+"% ("+b[2]+")";
+$("o-splh").textContent=hh>0&&ts>0?"$"+(ts/hh).toFixed(2):"—";$("o-lph").textContent=hh>0?"$"+(hw*(1+pt)).toFixed(2):"—";
+$("o-note").textContent=tot>0?("Labor = (hourly "+money(hourly)+" + salaried "+money(sp)+") × (1 + "+Math.round(pt*1000)/10+"%) = "+money(tot)+(ts>0?" = "+pct(lab)+" of "+money(ts)+" in sales.":".")):"";}
+Array.prototype.forEach.call(document.querySelectorAll("#calc input, #calc select"),function(e){e.addEventListener("input",calc);e.addEventListener("change",calc)});calc();})();</script>
+<footer><div class="in"><div>© 2026 PrimeCost Lab · Every benchmark sourced · Every formula validated by code</div><div class="links"><a href="https://primecostlab.github.io/sources/">Sources</a><a href="https://primecostlab.github.io/how-we-test/">How we test</a><a href="https://primecostlab.github.io/refunds/">Refunds</a><a href="https://primecostlab.github.io/privacy/">Privacy</a><a href="mailto:outilfinance@gmail.com">outilfinance@gmail.com</a></div></div></footer>
+</body></html>
