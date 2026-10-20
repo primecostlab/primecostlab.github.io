@@ -32,7 +32,7 @@
 <script>(function(){var $=function(i){return document.getElementById(i)};var money=function(n){return "$"+Math.round(n).toLocaleString("en-US")};var pct=function(n){return (Math.round(n*10)/10).toFixed(1)+"%"};
 function band(el,v,lo,hi){el.className=(v<=0||isNaN(v))?"":(v<=hi&&v>=lo?"ok":(v<lo||v<=hi+3?"warn":"bad"));}
 function calc(){var rc=+$("rc").value||0,tf=(+$("tf").value||30)/100,mp=+$("mp").value||0,rd=$("rd").value;
-var raw=tf>0?rc/tf:0,price=raw;if(rd==="0.95"){price=Math.ceil(raw)-0.05;if(price<raw)price+=1;}else{var step=+rd;price=Math.ceil(raw/step)*step;}
+var raw=tf>0?rc/tf:0,price=raw;if(rd==="0.95"){price=Math.ceil(raw)-0.05;if(price<raw)price+=1;}else{var step=+rd;price=Math.ceil(raw/step-1e-9)*step;}
 $("o-price").textContent=raw>0?"$"+price.toFixed(2):"—";$("o-raw").textContent=raw>0?("exact: $"+raw.toFixed(2)):"";$("o-cm").textContent=raw>0?"$"+(price-rc).toFixed(2):"—";
 var act=mp>0?100*rc/mp:NaN;$("o-act").textContent=isNaN(act)?"—":pct(act);$("o-cmc").textContent=mp>0?"$"+(mp-rc).toFixed(2):"—";
 var d=$("d-act");d.className=isNaN(act)?"":(act<=tf*100?"ok":(act<=tf*100+3?"warn":"bad"));$("o-actn").textContent=isNaN(act)?"vs your target":("target "+Math.round(tf*100)+"%");
